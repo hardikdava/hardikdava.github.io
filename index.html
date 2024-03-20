@@ -1,109 +1,84 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="Splatting Test">
-  <meta name="keywords" content="Splating Test">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Splating Test</title>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="./static/css/bootstrap-4.4.1.css">   
-
-  
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/72.png">
-
-  
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  <script src="./static/js/app.js"></script>
-  <script src="./static/js/video_comparison.js"></script>
-
-  <link rel="stylesheet" href="./static/css/dics.original.css">
-  <script src="./static/js/event_handler.js"></script>
-  <script src="./static/js/dics.original.js"></script>
-
-</head>
-<body>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-      
-          <video class="video" width="100%" id="xyalias6" loop playsinline autoplay muted src="resources/bicycle_3dgs_vs_ours.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
-          <canvas height=0 class="videoMerge" id="xyalias6Merge"></canvas>
-      
-          <h2 class="subtitle has-text-centered" style="margin-top: 15px">
-            TL;DR: We introduce a 3D smoothing filter and a 2D Mip filter for 3D Gaussian Splatting (3DGS), eliminating multiple artifacts and achieving alias-free renderings.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<head lang="en">
 
 <!--
-<section class="section">
-  <div class="container is-max-desktop">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+//-->
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Reconstructions</h2>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
 
-        <div class="embed-responsive embed-responsive-16by9">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-          <iframe style="clip-path: inset(1px 1px)" src="https://sketchfab.com/playlists/embed?collection=abee3cc1a7a7436c804f2bd3aadc2acd" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/video_comparison.js"></script>
+
+    <link rel="stylesheet" href="css/dics.min.css">
+    <script src="js/dics.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', domReady);
+        function domReady() {
+            for (const e of document.querySelectorAll(".b-dics")) {
+                new Dics({
+                    container: e,
+                    textPosition: "top"
+                });
+            }
+        }
+    </script>
+</head>
+
+<body>  
+
+        <div class="row comp-margin">
+            <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+                <div class="b-dics" style="width: 35%; float:left">
+                    <img src="img/sh0_frame_00001.png" alt="SH-0 (web-viewer)" />
+                    <img src="img/sh3_frame_00001.png" alt="SH-3 (gpu-viewer)" />
+                </div>
+
+                <div class="b-dics" style="width: 35%; float:left">
+                    <img src="img/sh0_frame_00209.png" alt="SH-0 (web-viewer)" />
+                    <img src="img/sh3_frame_00209.png" alt="SH-3 (gpu-viewer)" />
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+                <small>(click and drag to swipe)</small>
+            </div>
+            
+            
+            <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+                <div class="b-dics" style="width: 35%; float:left">
+                    <img src="img/gt_frame_00001.png" alt="GT" />
+                    <img src="img/sh3_frame_00001.png" alt="SH-3 (gpu-viewer)" />
+                </div>
+
+                <div class="b-dics" style="width: 35%; float:left">
+                    <img src="img/gt_frame_00001.png" alt="GT" />
+                    <img src="img/sh0_frame_00001.png" alt="SH-0 (web-viewer)" />
+                </div>
+            </div>
+
+
+            <br>
         
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
--->
-
-
-
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
-            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template. 
-            The video comparison with sliding bar is from <a href="https://dorverbin.github.io/refnerf/">Ref-NeRF</a>. 
-            The image comparison with sliding bar is from <a href="https://research.nvidia.com/labs/dir/neuralangelo/">Neuralangelo</a>. 
-          </p>
+        <div class="col-md-8 col-md-offset-1">
+            <video class="video" width=50% id="sh0_sh3_compare" loop playsinline autoplay muted src="img/sh0_sh3_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="sh0_sh3_compareMerge"></canvas>
+            <p class="text-justify">
+            </p>
         </div>
-      </div>
-          <p></p>
-        </div>
-      </div>
-</footer>
+   
 
 </body>
 </html>
