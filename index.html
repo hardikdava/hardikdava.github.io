@@ -94,63 +94,6 @@
           <video class="video" width="100%" id="xyalias1" loop playsinline autoplay muted src="resources/ship_3dgs_vs_ours.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
           <canvas height=0 class="videoMerge" id="xyalias1Merge"></canvas>
         </div>
-        
-
-        <h3 class="title is-4">Comparison wtih 3DGS + EWA</h3>
-        
-        <!-- 
-        <div class="content has-text-centered">
-          <video class="video" width="100%" id="xyalias2" loop playsinline autoplay muted src="resources/materials_3dgs_ewa_vs_ours.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
-          <canvas height=0 class="videoMerge" id="xyalias2Merge"></canvas>
-        </div>
-        -->
-
-        <div class="content has-text-centered">
-          <video class="video" width="100%" id="xyalias9" loop playsinline autoplay muted src="resources/bonsai_3dgs_ewa_vs_ours.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
-          <canvas height=0 class="videoMerge" id="xyalias9Merge"></canvas>
-        </div>
-
-        <div class="content has-text-justified">
-          <p>
-            Here, we show more comparisons with 3DGS + EWA. Both models are trained with downsampled images with factor 8 and render at higher-resolution. 
-            GT (Training resolution) is the image we used for training but bilinearly upsampled to higher-resolution for reference and GT (8x resolution) is the real GT image we used for evaluation.
-          </p>
-        </div>
-
-        <div class="container">
-          <ul class="nav nav-tabs nav-fill nav-justified" id="object-scale-recon">
-              <li class="nav-item">
-                <a class="nav-link" onclick="objectSceneEvent(0)">bicycle</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" onclick="objectSceneEvent(1)">bonsai</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="objectSceneEvent(2)">counter</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="objectSceneEvent(3)">flowers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="objectSceneEvent(4)">garden</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="objectSceneEvent(5)">kitchen</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="objectSceneEvent(6)">stump</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="objectSceneEvent(7)">treehill</a>
-              </li>
-          </ul>
-          <div class="b-dics" style="width: 1000px; font-weight: 600;">
-              <img src="resources/360_stmt_supp/bonsai_12_3dgs.jpg" alt="3DGS+EWA">
-              <img src="resources/360_stmt_supp/bonsai_12_ours.jpg" alt="Mip-Splatting (ours)">
-              <img src="resources/360_stmt_supp/bonsai_12_upgt.jpg" alt="GT (Training resolution)">
-              <img src="resources/360_stmt_supp/bonsai_12_gt.jpg" alt="GT (8x resolution)">
-          </div>
-        </div>
 
         <br>
         
