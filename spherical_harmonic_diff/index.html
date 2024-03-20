@@ -1,6 +1,11 @@
-
 <!DOCTYPE html>
 <html>
+
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
 
 <head lang="en">
 
@@ -38,46 +43,61 @@
     </script>
 </head>
 
-<body>  
+<body>
+    <div class="row comp-margin">
 
-        <div class="row comp-margin">
-            <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
-                <div class="b-dics" style="width: 35%; float:left">
-                    <img src="img/sh0_frame_00001.png" alt="SH-0 (web-viewer)" />
-                    <img src="img/sh3_frame_00001.png" alt="SH-3 (gpu-viewer)" />
-                </div>
-
-                <div class="b-dics" style="width: 35%; float:left">
-                    <img src="img/sh0_frame_00209.png" alt="SH-0 (web-viewer)" />
-                    <img src="img/sh3_frame_00209.png" alt="SH-3 (gpu-viewer)" />
-                </div>
-            </div>
-            <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
-                <small>(click and drag to swipe)</small>
-            </div>
-            
-            
-            <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
-                <div class="b-dics" style="width: 35%; float:left">
-                    <img src="img/gt_frame_00001.png" alt="GT" />
-                    <img src="img/sh3_frame_00001.png" alt="SH-3 (gpu-viewer)" />
-                </div>
-
-                <div class="b-dics" style="width: 35%; float:left">
-                    <img src="img/gt_frame_00001.png" alt="GT" />
-                    <img src="img/sh0_frame_00001.png" alt="SH-0 (web-viewer)" />
-                </div>
+        <strong><h1>Difference in Spherical Harmonic degree in Rendering 3DGS</h1></strong>
+        <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/sh0_frame_00001.png" alt="SH-0 (web-viewer)" />
+                <img src="img/sh3_frame_00001.png" alt="SH-3 (gpu-viewer)" />
             </div>
 
-
-            <br>
-        
-        <div class="col-md-8 col-md-offset-1">
-            <video class="video" width=50% id="sh0_sh3_compare" loop playsinline autoplay muted src="img/sh0_sh3_compare.mp4" onplay="resizeAndPlay(this)"></video>
-            <canvas height=0 class="videoMerge" id="sh0_sh3_compareMerge"></canvas>
-            <p class="text-justify">
-            </p>
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/sh0_frame_00209.png" alt="SH-0 (web-viewer)" />
+                <img src="img/sh3_frame_00209.png" alt="SH-3 (gpu-viewer)" />
+            </div>
         </div>
+        <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+            <small>(click and drag to swipe)</small>
+        </div>
+        <br>
+        <h3>comparision with ground truth views</h3>
+        <br>
+        <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/gt_frame_00001.png" alt="GT" />
+                <img src="img/sh3_frame_00001.png" alt="SH-3 (gpu-viewer)" />
+            </div>
+
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/gt_frame_00001.png" alt="GT" />
+                <img src="img/sh0_frame_00001.png" alt="SH-0 (web-viewer)" />
+            </div>
+        </div>
+        <br>
+
+        <h3>comparision with SH first and third truth views</h3>
+        <br>
+        <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/sh1_frame_00001.png" alt="SH-1" />
+                <img src="img/sh3_frame_00001.png" alt="SH-3" />
+            </div>
+
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/sh1_frame_00001.png" alt="SH-1" />
+                <img src="img/sh3_frame_00001.png" alt="SH-3" />
+            </div>
+        </div>
+        <br>
+
+    <div class="col-md-8 col-md-offset-1">
+        <video class="video" width=50% id="sh0_sh3_compare" loop playsinline autoplay muted src="img/sh0_sh3_compare.mp4" onplay="resizeAndPlay(this)"></video>
+        <canvas height=0 class="videoMerge" id="sh0_sh3_compareMerge"></canvas>
+        <p class="text-justify">
+        </p>
+    </div>
    
 
 </body>
