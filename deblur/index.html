@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+
+<head lang="en">
+
+<!--
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+//-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/video_comparison.js"></script>
+
+    <link rel="stylesheet" href="../css/dics.min.css">
+    <script src="../js/dics.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', domReady);
+        function domReady() {
+            for (const e of document.querySelectorAll(".b-dics")) {
+                new Dics({
+                    container: e,
+                    textPosition: "top"
+                });
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="row comp-margin">
+
+        <strong><h1>Effect of Deblurring Images</h1></strong>
+        <h3>comparision with blur simulation data</h3>
+        <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/raw/2/render_before_removal/frame_00372.png" alt="trained with blur" />
+                <img src="img/raw/2/render_after_removal/frame_00372.png" alt="trained without blur" />
+            </div>
+
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/raw/2/render_before_removal/frame_00462.png" alt="trained with blur" />
+                <img src="img/raw/2/render_after_removal/frame_00462.png" alt="trained without blur" />
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+            <small>(click and drag to swipe)</small>
+        </div>
+        <br>
+        <h3>comparision with original data</h3>
+        <br>
+        <div class="col-md-8 col-md-offset-2" style="width: 100%; overflow: hidden;">
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/raw/2/render_before_removal/frame_00515.png" alt="trained with blur" />
+                <img src="img/raw/2/render_after_removal/frame_00515.png" alt="trained without blur" />
+            </div>
+
+            <div class="b-dics" style="width: 35%; float:left">
+                <img src="img/raw/2/render_before_removal/frame_00520.png" alt="trained with blur" />
+                <img src="img/raw/2/render_after_removal/frame_00520.png" alt="trained without blur" />
+            </div>
+        </div>
+        <br>
+    </div>
+
+</body>
+</html>
