@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    h1 {text-align: center;   font-weight:100;}
+    h3 {text-align: center;   font-weight:100;}
+    p {text-align: center;}
+    div {text-align: center;}
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+
+</style>
+
+<head lang="en">
+
+    <!--
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+    //-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/video_comparison.js"></script>
+
+    <link rel="stylesheet" href="../css/dics.min.css">
+    <script src="../js/dics.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', domReady);
+        function domReady() {
+            for (const e of document.querySelectorAll(".b-dics")) {
+                new Dics({
+                    container: e,
+                    textPosition: "top"
+                });
+            }
+        }
+    </script>
+</head>
+
+<body>
+<h1><b> StopThePop Evaluation </b></h1>
+
+<h3>Spherical Harmonics Degree-3 (center)</h3>
+<section>
+    <div class="grid-container">
+        <div class="item">
+            <video class="video" width=100% id="3dgs_trips_pg" loop playsinline autoplay muted
+                   src="imgs/blackShoes_3_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="3dgs_trips_pgMerge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+        <div class="item">
+            <video class="video" width=100% id="sh1_sh3_pg" loop playsinline autoplay muted
+                   src="imgs/colorShoes_3_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="sh1_sh3_pgMerge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+
+        <div class="item">
+            <video class="video" width=100% id="pikachu" loop playsinline autoplay muted
+                   src="imgs/pikachu_3_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="pikachuMerge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+    </div>
+
+    <h3>Spherical Harmonics Degree-2 (center)</h3>
+    <div class="grid-container">
+        <div class="item">
+            <video class="video" width=100% id="blackShoes_2" loop playsinline autoplay muted
+                   src="imgs/blackShoes_2_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="blackShoes_2Merge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+        <div class="item">
+            <video class="video" width=100% id="colorShoes_2" loop playsinline autoplay muted
+                   src="imgs/colorShoes_2_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="colorShoes_2Merge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+
+        <div class="item">
+            <video class="video" width=100% id="pikachu_2" loop playsinline autoplay muted
+                   src="imgs/pikachu_2_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="pikachu_2Merge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+    </div>
+
+    <h3>Spherical Harmonics Degree-1 (center)</h3>
+    <div class="grid-container">
+        <div class="item">
+            <video class="video" width=100% id="blackShoes_1" loop playsinline autoplay muted
+                   src="imgs/blackShoes_1_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="blackShoes_1Merge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+        <div class="item">
+            <video class="video" width=100% id="colorShoes_1" loop playsinline autoplay muted
+                   src="imgs/colorShoes_1_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="colorShoes_1Merge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+
+        <div class="item">
+            <video class="video" width=100% id="pikachu_1" loop playsinline autoplay muted
+                   src="imgs/pikachu_1_compare.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="pikachu_1Merge"></canvas>
+            <p class="text-justify">
+            </p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
